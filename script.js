@@ -47,18 +47,31 @@ const compute = () => {
   const previousNumber = parseInt(previousInput);
   const currentNumber = parseInt(currentInput);
 
+  const calculator = (() => {
+    const add = (a, b) => a + b;
+    const subtract = (a, b) => a - b;
+    const multiply = (a, b) => a * b;
+    const divide = (a, b) => a / b;
+    return {
+      add,
+      subtract,
+      multiply,
+      divide,
+    };
+  })();
+
   switch (operator) {
     case "+":
-      total = previousNumber + currentNumber;
+      total = calculator.add(previousNumber, currentNumber);
       break;
     case "−":
-      total = previousNumber - currentNumber;
+      total = calculator.subtract(previousNumber, currentNumber);
       break;
     case "×":
-      total = previousNumber * currentNumber;
+      total = calculator.multiply(previousNumber, currentNumber);
       break;
     case "÷":
-      total = previousNumber / currentNumber;
+      total = calculator.divide(previousNumber, currentNumber);
       break;
     default:
       return "";
