@@ -1,18 +1,26 @@
 * {
+  background: url("images/wallpaperflare.com_wallpaper.svg");
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
 }
 
 #root {
-  background-color: white;
-  height: 100dvh;
+  width: 100dvw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1em;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 h1 {
@@ -21,10 +29,10 @@ h1 {
 }
 
 .main {
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 1em;
   border-radius: 5px;
-  background-color: #0c0c0c;
+  background-color: white;
   width: 100%;
 }
 
@@ -41,26 +49,30 @@ h1 {
 }
 
 .display {
-  border: 1px solid gray;
+  border: 1px solid white;
   margin-bottom: 0.5em;
   padding: 15px;
   background-color: white;
   display: flex;
   flex-direction: column;
+  color: white;
 }
 
 .display input {
   text-align: right;
   border: none;
+  color: white;
 }
 
 .small-display {
   font-size: 16px;
   margin-bottom: 5px;
+  color: white;
 }
 
 .large-display {
   font-size: 45px;
+  color: white;
 }
 
 .inputs {
@@ -71,7 +83,7 @@ h1 {
 
 .inputs button {
   font-size: 30px;
-  border: 1px solid gray;
+  border: 1px solid white;
   padding: 20px;
   background-color: #3b75f2;
   color: white;
